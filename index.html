@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color:lightpink;
+    }
+    .container {
+      text-align: center;
+    }
+    .balloon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: float 5s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+    .balloon div {
+      display: inline-block;
+      font-size: 24px;
+      padding: 5px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      margin: 2px;
+    }
+    .text {
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      animation: float 5s infinite;
+    }
+    .name-animation {
+        animation: float 5s infinite;
+      }
+    .gift-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gift-button {
+      border-radius: 20px;
+      background-color: #2196f3;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .gift-button:hover {
+      background-color: #ffeb3b;
+      color: #000;
+    }
+    /* Màu nền của mỗi quả bóng */
+    .balloon div:nth-child(odd) {
+      background-color: #FFC107; /* Màu vàng */
+    }
+    .balloon div:nth-child(even) {
+      background-color: #67ff49; /* Màu hồng */
+    }
+
+    @media (max-width: 576px) {
+      .balloon {
+        font-size: 16px;
+      }
+      .avatar {
+        width: 80px;
+        height: 80px;
+      }
+      .text {
+        font-size: 15px;
+      }
+      .gift-button {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+    }
+    
+ #van-anh-text {
+  display: none;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff9c4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="balloon">
+      <div><span>H</span></div>
+      <div><span>A</span></div>
+      <div><span>P</span></div>
+      <div><span>P</span></div>
+      <div><span>Y</span></div>
+      <div><span>B</span></div>
+      <div><span>I</span></div>
+      <div><span>R</span></div>
+      <div><span>T</span></div>
+      <div><span>H</span></div>
+      <div><span>D</span></div>
+      <div><span>A</span></div>
+      <div><span>Y</span></div>
+    </div>
+    <div class="text">
+      <img src="./img/a1.jpg" alt="Avatar" class="avatar">
+      <h5 class="name-animation">Chị Vân Anh tuyệt nhất zũ trụ 😎</h5>
+      <p>Thời gian trôi qua thật nhanh,chớp mắt một cái thì đã tới ngày đầy ý nghĩa và đặc biệt này.
+      Chính là hôm nay 24/11,sinh nhật của chị Vân Anh đáng mến,và là một người chị mà em rất quý trọng ^-^ </p>
+    </div>
+    <div class="gift-buttons"> 
+       Dạ thì,cô bé lạnh lùng này có 2 hộp quà nho nhỏ ở đây muốn dành cho chị iu, chị muốn chọn hộp nào ạ?😗
+          <a href="birthday/gift1.html" class="gift-button">
+        <img src="./img/7.gif"style="width: 90px; height: 90px; margin-right: 10px;">
+          Hộp này
+        </a>
+        <h6>Hay</h6>
+        <a href="birthday/gift2.html" class="gift-button">
+            <img src="./img/2.gif"style="width: 90px; height: 90px; margin-right: 10px;">Hộp này
+        </a>
+    </div>
+    <p id="van-anh-text" style="display: none;margin-top: 50px;padding:50px">"Em không thích học Anh Văn vì em chỉ thích học về Vân Anh."</p>
+    <button id="show-button" class="gift-button"style="margin-top: 50px;">Chị muốn cảm nhận độ sến súa phải không ạ?.Hãy nhấn vào đây</button>
+    
+    <script>
+      // Thêm sự kiện click cho nút
+      document.getElementById("show-button").addEventListener("click", function() {
+        // Hiển thị đoạn văn
+        document.getElementById("van-anh-text").style.display = "block";
+        // Ẩn nút sau khi nhấn
+        this.style.display = "none";
+      });
+    </script>
+    
+  </div>
+</body>
+</html>
